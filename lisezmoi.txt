@@ -1,0 +1,25 @@
+Originalité :
+  - Garde en mémoire et affiche dans une liste tout les albums placé dans les bon dossier.
+  - Sélection de l'album a regarder directement sur la liste des albums.
+  - Différenciations des fichier txt grâce a une préfixe renvoyant au type de fichier :
+        - Album_****.txt
+        - Event_****.txt
+        - AlbumEvent_****.txt
+  - Les images sont sauvegardé dans un dossier nommé "Images".
+        - celles contenue directement dans ce dossier ne sont lier a aucun événements.
+        - Si une images est contenue dans un sous-dossier du dossier Images alors elles fait partie de l'événement nommé au nom du dossier.
+  - Séparation dans différentes classes des partie de L'IHM
+        - Affichage Général                                 : WindowFrame
+        - Partie d'affichage de la listes des Album         : AlbumSelector
+        - Partie d'affichage des photos de l'album en cours : PhotoManager divider en :
+                                                                - PhotoSelector
+                                                                - PhotoViewer
+
+  - PhotoManager & AlbumManager Observe PicView qui lui gère les albums
+  - PicView est lié à AlbumSelector et PhotoManager
+  
+Fonctionnalité :
+  - Chargement automatique de tous les albums sauvegardé
+  - Sélections des albums grâce a la liste a droite
+  - Changement de photos avec bouton ou choix sur la liste à gauche
+  - Menu de création d'événements / Album / AlbumEvent
